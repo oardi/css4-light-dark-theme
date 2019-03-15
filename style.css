@@ -1,0 +1,106 @@
+body {
+    --bg-color: #F3F7F9;
+    --bg-content-color: #fff;
+    --body-color: #444;
+    --title-color: #111;
+    --link-color: #9eabe7;
+    --border-color: rgba(0, 0, 0, .1);
+    --radius: 5px;
+    --icon: url(img/sun-solid.svg)
+}
+
+body[data-theme="dark"] {
+    --bg-color: #0D2538;
+    --bg-content-color: #0f2d44;
+    --border-color: rgba(255, 255, 255, .1);
+    --body-color: #ced8de;
+    --title-color: #fff;
+    --link-color: #f3c487;
+    --icon: url(/img/moon-solid.svg)
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--body-color);
+    transition: color .6s, background-color .6s;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--link-color);
+}
+
+button {
+    background-color: var(--bg-content-color);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    color: var(--body-color);
+    padding: 10px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.icon {
+    color: var(--body-color);
+    /* background-image: var(--icon); */
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+
+    background-color: var(--body-color);
+    -webkit-mask-image: var(--icon);
+    mask-image: var(--icon);
+}
+
+.card {
+    background-color: var(--bg-content-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+}
+
+.card .card-title {
+    color: var(--title-color);
+}
+
+.card .card-body {
+    padding: 20px;
+}
+
+.p-2 {
+    padding: 20px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.ml-2 {
+    margin-left: 20px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
